@@ -52,5 +52,9 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "@backstage/plugin-jenkins": "^0.9.10",
+    "react-use": "^17.6.0"
+  }
 }

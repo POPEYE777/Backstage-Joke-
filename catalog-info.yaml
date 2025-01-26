@@ -11,3 +11,8 @@ spec:
   type: website
   owner: john@example.com
   lifecycle: experimental
+
+# Example:
+metadata:
+  annotations:
+    backstage.io/managed-by-origin-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml

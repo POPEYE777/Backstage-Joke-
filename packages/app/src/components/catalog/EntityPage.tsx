@@ -28,6 +28,8 @@ import {
   hasRelationWarnings,
   EntityRelationWarning,
 } from '@backstage/plugin-catalog';
+import { EntityJenkinsContent } from '@backstage/plugin-jenkins';
+
 import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
@@ -58,6 +60,8 @@ import {
   EntityKubernetesContent,
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
+import { JokeCard } from '@internal/backstage-plugin-joke';
+import { FlowsourceJenkinsPage } from '@internal/backstage-plugin-flowsource-jenkins';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -142,6 +146,8 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+
   </Grid>
 );
 
@@ -188,6 +194,17 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>
+    
+
+    <EntityLayout.Route path="/flowsource-jenkins" title="Jenkins">
+      <FlowsourceJenkinsPage />
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/JokeCard" title="Joke">
+      <JokeCard />
+    </EntityLayout.Route>
+
+
   </EntityLayout>
 );
 
@@ -223,6 +240,16 @@ const websiteEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>
+
+    <EntityLayout.Route path="/jenkins" title="Jenkins">
+      <FlowsourceJenkinsPage />
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/JokeCard" title="Joke">
+      <JokeCard />
+    </EntityLayout.Route>
+    
+
   </EntityLayout>
 );
 
